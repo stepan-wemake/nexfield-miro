@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contrast Checker</title>
+  <script src="https://miro.com/app/static/sdk/v2/miro.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <main class="panel">
+    <h1>Contrast Checker</h1>
+    <p class="hint">Select a sticky note, shape or text on the board to check its text against its fill.</p>
+
+    <section id="selection" aria-live="polite"></section>
+
+    <h2>Check any two colours</h2>
+    <form id="manual" class="manual" autocomplete="off">
+      <label>Text
+        <span class="pair"><input type="color" id="fg-picker" value="#1a1a1a" aria-label="Text colour picker"><input type="text" id="fg" value="#1a1a1a" spellcheck="false"></span>
+      </label>
+      <label>Background
+        <span class="pair"><input type="color" id="bg-picker" value="#ffffff" aria-label="Background colour picker"><input type="text" id="bg" value="#ffffff" spellcheck="false"></span>
+      </label>
+    </form>
+    <div id="manual-result" aria-live="polite"></div>
+
+    <footer>
+      WCAG 2.2 contrast. Need more? Try the
+      <a href="https://nexfield.academy/resources/services/contrast-checker/?utm_source=miro&amp;utm_medium=app&amp;utm_campaign=contrast" target="_blank" rel="noopener">online contrast checker</a>
+      by <a href="https://nexfield.academy/?utm_source=miro&amp;utm_medium=app&amp;utm_campaign=contrast" target="_blank" rel="noopener">Nexfield Academy</a>.
+    </footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

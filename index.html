@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contrast Checker for Miro by Nexfield</title>
+  <script src="https://miro.com/app/static/sdk/v2/miro.js"></script>
+</head>
+<body>
+  <!-- Headless entry point: Miro loads this page in a hidden iframe. -->
+  <script type="module">
+    if (window.miro) {
+      miro.board.ui.on('icon:click', async () => {
+        await miro.board.ui.openPanel({ url: 'app.html' })
+      })
+    } else {
+      document.body.innerHTML =
+        '<p style="font-family:sans-serif;padding:24px">Contrast Checker is a Miro app. ' +
+        'Made by <a href="https://nexfield.academy/">Nexfield Academy</a>.</p>'
+    }
+  </script>
+</body>
+</html>
